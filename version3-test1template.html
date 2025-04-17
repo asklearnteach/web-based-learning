@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" >
+        <meta name="author" content="Husbands, Nathan">
+        <style>
+
+            html {
+                text-align: center;
+                background-color:white;
+                color: midnightblue;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+
+            #power {
+                vertical-align: super;
+                font-size: 0.8em;
+            }
+
+            .red {color: red;}
+            .green {color: green;}
+
+            #allcontent {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                display: block;
+            }
+
+            input {
+                border: 2px solid cadetblue;
+                background-color: lightgrey;
+                border-radius: 10px;
+                color: dimgrey;
+                font-size: 1em;
+            }
+
+            input:hover {
+                color:darkblue;
+                border: 3px solid midnightblue;
+            }
+
+            #question1 {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                display: block;
+            }
+
+            #question2 {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                display: block;
+            }
+
+            #question3 {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                display: block;
+            }
+
+            #question4 {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                display: block;
+            }
+
+            #question5 {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                display: block;
+            }
+
+            #question6 {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                display: block;
+            }
+
+            #question7 {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                display: block;
+            }
+
+            #question8 {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                display: block;
+            }
+
+            #question9 {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                display: block;
+            }
+
+            #question10 {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                display: block;
+            }
+
+        /**HEADER**/
+
+            #header {
+                height: 3%;
+                width: 98%;
+                position: absolute;
+                display: flex;
+                padding: 0.5%;
+            }
+
+            #testtype {
+                height: 90%;
+                width: 60%;
+                left: 20%;
+                position: relative;
+                background-color: lightgrey;
+                border: 1px solid black;
+            }
+
+        /**QUESTIONS, INSTRUCTIONS AND HINTS**/
+
+            #questionhints {
+                height: 45%;
+                width: 98%;
+                top: 6%;
+                position: absolute;
+                display: flex;
+                background-color: white;
+                padding: 0.5%;
+            }
+
+            #questionbox {
+                height: 99%;
+                width: 71%;
+                position: relative;
+                display: block;
+                margin-right: 0.5%;
+            }
+
+            #questionnumber {
+                height: 17%;
+                width: 99.5%;
+                position: relative;
+                background-color:papayawhip;
+                border-top: 4px solid lightsalmon;
+                border-left: 4px solid lightsalmon;
+                border-right: 4px solid lightsalmon;
+                font-size: 2em;
+                padding-top: 1%;
+            }
+
+            #subject {
+                height: 17%;
+                width: 99.5%;
+                background-color:papayawhip;
+                border-left: 4px solid lightsalmon;
+                border-right: 4px solid lightsalmon;
+                border-bottom: 2px solid lightsalmon; 
+                font-size: 1.4em;
+                padding-top: 1%;
+            }
+
+            #questiontext {
+                height: 53%;
+                width: 99.5%;
+                position: relative;
+                background-color:snow;
+                border-top: 2px solid lightgrey; 
+                border-left: 4px solid lightgrey;
+                border-right: 4px solid lightgrey;
+                border-bottom: 4px solid lightgrey; 
+                font-size: 1.8em;
+                padding-top: 1%;
+            }
+
+            #hintsinstructionbox {
+                height: 99%;
+                width: 40%;
+                position: relative;
+                display: block;
+            }
+
+            #instructionsbuttonbox {
+                height: 15%;
+                width: 99%;
+                position: relative;
+            }
+
+
+            #hintsbox {
+                height: 82%;
+                width: 99%;
+                position: relative;
+            }
+
+            #hintsbuttonbox {
+                height: 26%;
+                width: 60%;
+                left: 20%;
+                position: relative;
+                background-color: yellow;
+                padding-top: 2%;
+            } 
+
+            #hintstext {
+                height: 60%;
+                width: 59%;
+                left: 20%;
+                top: -8%;
+                position: relative;
+                background-color: lightyellow;
+                border: 2px solid yellow;
+                padding-top: 2%;
+            }
+
+
+        /**FEEDBACK, ANSWERS AND SUGGESTIONS**/
+
+            #feedbackanswersuggestions {
+                height: 22%;
+                width: 98%;
+                top: 54%;
+                position: absolute;
+                display: flex;
+                background-color: white;    
+                padding: 0.5%;
+            }
+
+            #feedbackbox {
+                height: 77%;
+                width: 40%;
+                position: relative;
+                background-color: lightgreen;
+                border: 2px solid green;
+                margin-right: 0.5%;
+                padding: 1%;
+            }
+
+            #feedbacktext {
+                height: 100%;
+                width: 100%;
+                top: -20%;
+                position: relative;
+                font-size: 1.2em;
+            }
+
+            #answersubmitbox {
+                height: 99%;
+                width: 30%;
+                position: relative;
+                display: block;
+                margin-right: 0.5%;
+            }
+
+            #answertext {
+                height: 15%;
+                width: 90%;
+                position: relative;
+                padding: 5%;
+            }
+
+            #submitbuttonbox {
+                height: 85%;
+                width: 90%;
+                position: relative;
+                padding: 5%;
+            }
+
+
+            #suggestionsbox {
+                height: 98%;
+                width: 40%;
+                position: relative;
+                display: block;
+            }
+
+            #suggestionsbuttonbox {
+                height: 34%;
+                width: 60%;
+                left: 18%;
+                position: relative;
+                background-color: purple;
+                border: 2px solid purple;
+                padding-top: 2%;
+            }
+
+            #suggestionstext {
+                height: 60%;
+                width: 60%;
+                top: -12%;
+                left: 18%;
+                position: relative;
+                background-color: lavender;
+                border: 2px solid purple;
+                padding-top: 2%;
+            }
+
+        /**NEXT QUESTION**/
+
+            #nextquestion {
+                height: 8%;
+                width: 98%;
+                top: 84%;
+                position: absolute;
+                display: flex;
+                background-color:white;
+                padding: 0.5%;
+            }
+
+            #nextquestionbuttonbox {
+                height: 70%;
+                width: 40%;
+                left: 33%;
+                position: relative;
+                padding-top: 1%;
+                background-color: white;
+                border: 1px solid black;
+            }
+
+        /**EMPTY BOX**/
+
+            #emptybox  {
+                height: 6%;
+                width: 99%;
+                top: 85%;
+                position: absolute;
+                display: flex;
+            }
+
+        /**FOOTER**/
+
+            #footer {
+                height: 1%;
+                width: 98%;
+                top: 92%;
+                position: absolute;
+                display: flex;
+                padding: 0.5%;
+            }
+
+            #funfactbox {
+                height: 95%;
+                width: 60%;
+                left: 20%;
+                position: relative;
+            }
+
+
+        </style>
+        <script> // QUESTION 1
+        
+        
+
+           // FIRST ATTEMPT AT QUESTION 1 
+
+           function submitAnswer1 (form) {
+            var choice = document.getElementById("answer1").value; // user input
+                    
+                if (choice == "") {
+                    alert("please enter an answer before submitting"); //blank submission alert
+                } else if (choice == "...ANSWER GOES HERE...") {
+                       document.getElementById("feedbacktext1").innerHTML = 
+                       `<span class="green">Correct answer, good job! </span>` //correct first time feedback;
+                    document.getElementById("submitbutton1").hidden = true; //hide first button
+                    document.getElementById("nextquestionbutton1").hidden = false; //show next question button
+                    form.elements["answer1"].readOnly = true; //lock-in answer
+                } else if (choice != "...ANSWER GOES HERE...") {
+                    document.getElementById("feedbacktext1").innerHTML = 
+                        `<span class="red">Sorry, that is incorrect</span><br>
+                            <br>but you were so close, you should have another try`; //incorrect first time feedback
+                    document.getElementById("submitbutton1").hidden = true; //hide first button
+                    document.getElementById("submitbutton11").hidden = false; //show second button
+                    document.getElementById("suggestionsbutton1").hidden = false; //show suggestions button
+                    document.getElementById("suggestionstext1").innerHTML = `Maybe try a suggestion, there could be an easy way to find the answer`
+                    if (document.getElementById("hintsbutton1").hidden == false) {
+                    document.getElementById("hintstext1").innerHTML = `Try using a hint to help you remember something important`
+                    }// suggest using a hint
+                }
+                    
+        } //END FIRST ATTEMPT
+
+
+        //SECOND ATTEMPT AT QUESTION 1
+
+        function submitAnswer11 (form) {
+            var choice = document.getElementById("answer1").value; // user input
+
+            if (choice == "") {
+                    alert("please enter an answer before submitting"); //blank submission alert
+            } else if (choice == "...ANSWER GOES HERE...") {
+                document.getElementById("feedbacktext1").innerHTML = 
+                    `<span class="green">Well done, that is correct!</span>`; //correct second time feedback
+                document.getElementById("submitbutton11").hidden = true; //hide second button
+                document.getElementById("nextquestionbutton1").hidden = false; //show next question button
+                form.elements["answer1"].readOnly = true; //lock-in answer
+                document.getElementById("suggestionsbutton1").hidden = true; //hide suggestions button
+            } else if (choice != "...ANSWER GOES HERE...") {
+                document.getElementById("feedbacktext1").innerHTML = 
+                    `<span class="red">oh no that is incorrect</span> <br><br>
+                    <span class="green">The correct answer is <br> ...CORRECT ANSWER GOES HERE... <span>`; //incorrect second time feedback
+                document.getElementById("submitbutton11").hidden = true; //hide second button
+                    document.getElementById("nextquestionbutton1").hidden = false; //show next question button
+                form.elements["answer1"].readOnly = true; //lock-in answer
+                document.getElementById("suggestionstext1").innerHTML = `maybe try revising ...SUBJECT GOES HERE...`; //incorrect second time feedback
+                document.getElementById("suggestionsbutton1").hidden = true; //hide suggestions button
+            }
+        } //END SECOND ATTEMPT
+
+        //HINTS
+
+        function hints1 (form) {
+            document.getElementById("hintstext1").innerHTML = 
+                "...HINT GOES HERE...";
+            document.getElementById("hintsbutton1").hidden = true; //hide help button
+        } //hint shown when button pressed
+
+        //SUGGESTIONS
+
+        function suggestions1 (form) {
+            document.getElementById("suggestionstext1").innerHTML = "...SUGGESTION GOES HERE...";
+            document.getElementById("suggestionsbutton1").hidden = true; //hide suggestions button
+        } //suggestion for incorrect first answer  
+
+        //NEXT QUESTION
+        
+        function nextQuestion1 (form) {
+            var choice = document.getElementById("submitbutton1").hidden;
+            var choices = document.getElementById("submitbutton11").hidden;
+            if (choice == false) {
+                alert("please enter an answer before going to the next question"); //blank submission alert
+                document.getElementById("ref1").href = "#question1";
+            }
+            if (choices == false) {
+                alert("please enter an answer before going to the next question"); //blank submission alert
+                document.getElementById("ref1").href = "#question1";
+            }
+        }
+
+
+    
+        </script>
+        <script> // QUESTION 2
+            
+
+           // FIRST ATTEMPT AT QUESTION 2 
+
+        function submitAnswer2 (form) {
+            var choice = document.getElementById("answer2").value; // user input
+                    
+                if (choice == "") {
+                    alert("please enter an answer before submitting"); //blank submission alert
+                } else if (choice == "...ANSWER GOES HERE...") {
+                       document.getElementById("feedbacktext2").innerHTML = 
+                       `<span class="green">Correct answer, good job! </span>` //correct first time feedback;
+                    document.getElementById("submitbutton2").hidden = true; //hide first button
+                    document.getElementById("nextquestionbutton2").hidden = false; //show next question button
+                    form.elements["answer2"].readOnly = true; //lock-in answer
+                } else if (choice != "...ANSWER GOES HERE...") {
+                    document.getElementById("feedbacktext2").innerHTML = 
+                        `<span class="red">Sorry, that is incorrect</span><br>
+                            <br>but you were so close, you should have another try`; //incorrect first time feedback
+                    document.getElementById("submitbutton2").hidden = true; //hide first button
+                    document.getElementById("submitbutton22").hidden = false; //show second button
+                    document.getElementById("suggestionsbutton2").hidden = false; //show suggestions button
+                    document.getElementById("suggestionstext2").innerHTML = `Maybe try a suggestion, there could be an easy way to find the answer`
+                    if (document.getElementById("hintsbutton2").hidden == false) {
+                    document.getElementById("hintstext2").innerHTML = `Try using a hint to help you remember something important`
+                    }// suggest using a hint
+                }
+                    
+        } //END FIRST ATTEMPT
+
+
+        //SECOND ATTEMPT AT QUESTION 2
+
+        function submitAnswer22 (form) {
+            var choice = document.getElementById("answer2").value; // user input
+
+            if (choice == "") {
+                    alert("please enter an answer before submitting"); //blank submission alert
+            } else if (choice == "...ANSWER GOES HERE...") {
+                document.getElementById("feedbacktext2").innerHTML = 
+                    `<span class="green">Well done, that is correct!</span>`; //correct second time feedback
+                document.getElementById("submitbutton22").hidden = true; //hide second button
+                document.getElementById("nextquestionbutton2").hidden = false; //show next question button
+                form.elements["answer2"].readOnly = true; //lock-in answer
+                document.getElementById("suggestionsbutton2").hidden = true; //hide suggestions button
+            } else if (choice != "...ANSWER GOES HERE...") {
+                document.getElementById("feedbacktext2").innerHTML = 
+                    `<span class="red">oh no that is incorrect</span> <br><br>
+                    <span class="green">The correct answer is <br> ...CORRECT ANSWER GOES HERE... <span>`; //incorrect second time feedback
+                document.getElementById("submitbutton22").hidden = true; //hide second button
+                document.getElementById("nextquestionbutton2").hidden = false; //show next question button
+                form.elements["answer2"].readOnly = true; //lock-in answer
+                document.getElementById("suggestionstext2").innerHTML = `maybe try revising ...SUBJECT GOES HERE...`; //incorrect second time feedback
+                document.getElementById("suggestionsbutton2").hidden = true; //hide suggestions button
+            }
+        } //END SECOND ATTEMPT
+
+        //HINTS
+
+        function hints2 (form) {
+            document.getElementById("hintstext2").innerHTML = 
+                "...HINT GOES HERE...";
+            document.getElementById("hintsbutton2").hidden = true; //hide help button
+        } //hint shown when button pressed
+
+        //SUGGESTIONS
+
+        function suggestions2 (form) {
+            document.getElementById("suggestionstext2").innerHTML = "...SUGGESTION GOES HERE...";
+            document.getElementById("suggestionsbutton2").hidden = true; //hide suggestions button
+        } //suggestion for incorrect first answer  
+
+        //NEXT QUESTION
+
+        function nextQuestion2 (form) {
+            var choice = document.getElementById("submitbutton2").hidden;
+            var choices = document.getElementById("submitbutton22").hidden;
+            if (choice == false) {
+                alert("please enter an answer before going to the next question"); //blank submission alert
+                document.getElementById("ref2").href = "#question2";
+            }
+            if (choices == false) {
+                alert("please enter an answer before going to the next question"); //blank submission alert
+                document.getElementById("ref2").href = "#question2";
+            }
+        }
+
+        </script>
+        <script> // QUESTION 3
+            
+
+            // FIRST ATTEMPT AT QUESTION 3 
+ 
+         function submitAnswer3 (form) {
+             var choice = document.getElementById("answer3").value; // user input
+                     
+                 if (choice == "") {
+                     alert("please enter an answer before submitting"); //blank submission alert
+                 } else if (choice == "...ANSWER GOES HERE...") {
+                        document.getElementById("feedbacktext3").innerHTML = 
+                        `<span class="green">Correct answer, good job! </span>` //correct first time feedback;
+                     document.getElementById("submitbutton3").hidden = true; //hide first button
+                    document.getElementById("nextquestionbutton3").hidden = false; //show next question button
+                     form.elements["answer3"].readOnly = true; //lock-in answer
+                 } else if (choice != "...ANSWER GOES HERE...") {
+                     document.getElementById("feedbacktext3").innerHTML = 
+                         `<span class="red">Sorry, that is incorrect</span><br>
+                             <br>but you were so close, you should have another try`; //incorrect first time feedback
+                     document.getElementById("submitbutton3").hidden = true; //hide first button
+                     document.getElementById("submitbutton33").hidden = false; //show second button
+                     document.getElementById("suggestionsbutton3").hidden = false; //show suggestions button
+                     document.getElementById("suggestionstext3").innerHTML = `Maybe try a suggestion, there could be an easy way to find the answer`
+                     if (document.getElementById("hintsbutton3").hidden == false) {
+                     document.getElementById("hintstext3").innerHTML = `Try using a hint to help you remember something important`
+                     }// suggest using a hint
+                 }
+                     
+         } //END FIRST ATTEMPT
+ 
+ 
+         //SECOND ATTEMPT AT QUESTION 3
+ 
+         function submitAnswer33 (form) {
+             var choice = document.getElementById("answer3").value; // user input
+ 
+             if (choice == "") {
+                     alert("please enter an answer before submitting"); //blank submission alert
+             } else if (choice == "...ANSWER GOES HERE...") {
+                 document.getElementById("feedbacktext3").innerHTML = 
+                     `<span class="green">Well done, that is correct!</span>`; //correct second time feedback
+                 document.getElementById("submitbutton33").hidden = true; //hide second button
+                    document.getElementById("nextquestionbutton3").hidden = false; //show next question button
+                 form.elements["answer3"].readOnly = true; //lock-in answer
+                 document.getElementById("suggestionsbutton3").hidden = true; //hide suggestions button
+             } else if (choice != "...ANSWER GOES HERE...") {
+                 document.getElementById("feedbacktext3").innerHTML = 
+                     `<span class="red">oh no that is incorrect</span> <br><br>
+                     <span class="green">The correct answer is <br> ...CORRECT ANSWER GOES HERE... <span>`; //incorrect second time feedback
+                 document.getElementById("submitbutton33").hidden = true; //hide second button
+                    document.getElementById("nextquestionbutton3").hidden = false; //show next question button
+                 form.elements["answer3"].readOnly = true; //lock-in answer
+                 document.getElementById("suggestionstext3").innerHTML = `maybe try revising ...SUBJECT GOES HERE...`; //incorrect second time feedback
+                 document.getElementById("suggestionsbutton3").hidden = true; //hide suggestions button
+             }
+         } //END SECOND ATTEMPT
+ 
+         //HINTS
+ 
+         function hints3 (form) {
+             document.getElementById("hintstext3").innerHTML = 
+                 "...HINT GOES HERE...";
+             document.getElementById("hintsbutton3").hidden = true; //hide help button
+         } //hint shown when button pressed
+ 
+         //SUGGESTIONS
+ 
+         function suggestions3 (form) {
+             document.getElementById("suggestionstext3").innerHTML = "...SUGGESTION GOES HERE...";
+             document.getElementById("suggestionsbutton3").hidden = true; //hide suggestions button
+         } //suggestion for incorrect first answer  
+ 
+         //NEXT QUESTION
+ 
+         function nextQuestion3 (form) {
+             var choice = document.getElementById("submitbutton3").hidden;
+             var choices = document.getElementById("submitbutton33").hidden;
+             if (choice == false) {
+                 alert("please enter an answer before going to the next question"); //blank submission alert
+                 document.getElementById("ref3").href = "#question3";
+             }
+             if (choices == false) {
+                 alert("please enter an answer before going to the next question"); //blank submission alert
+                 document.getElementById("ref3").href = "#question3";
+             }
+         }
+ 
+         </script>
+         <script> // QUESTION 4
+            
+
+            // FIRST ATTEMPT AT QUESTION 4 
+ 
+         function submitAnswer4 (form) {
+             var choice = document.getElementById("answer4").value; // user input
+                     
+                 if (choice == "") {
+                     alert("please enter an answer before submitting"); //blank submission alert
+                 } else if (choice == "...ANSWER GOES HERE...") {
+                        document.getElementById("feedbacktext4").innerHTML = 
+                        `<span class="green">Correct answer, good job! </span>` //correct first time feedback;
+                     document.getElementById("submitbutton4").hidden = true; //hide first button
+                    document.getElementById("nextquestionbutton4").hidden = false; //show next question button
+                     form.elements["answer4"].readOnly = true; //lock-in answer
+                 } else if (choice != "...ANSWER GOES HERE...") {
+                     document.getElementById("feedbacktext4").innerHTML = 
+                         `<span class="red">Sorry, that is incorrect</span><br>
+                             <br>but you were so close, you should have another try`; //incorrect first time feedback
+                     document.getElementById("submitbutton4").hidden = true; //hide first button
+                     document.getElementById("submitbutton44").hidden = false; //show second button
+                     document.getElementById("suggestionsbutton4").hidden = false; //show suggestions button
+                     document.getElementById("suggestionstext4").innerHTML = `Maybe try a suggestion, there could be an easy way to find the answer`
+                     if (document.getElementById("hintsbutton4").hidden == false) {
+                     document.getElementById("hintstext4").innerHTML = `Try using a hint to help you remember something important`
+                     }// suggest using a hint
+                 }
+                     
+         } //END FIRST ATTEMPT
+ 
+ 
+         //SECOND ATTEMPT AT QUESTION 4
+ 
+         function submitAnswer44 (form) {
+             var choice = document.getElementById("answer4").value; // user input
+ 
+             if (choice == "") {
+                     alert("please enter an answer before submitting"); //blank submission alert
+             } else if (choice == "...ANSWER GOES HERE...") {
+                 document.getElementById("feedbacktext4").innerHTML = 
+                     `<span class="green">Well done, that is correct!</span>`; //correct second time feedback
+                 document.getElementById("submitbutton44").hidden = true; //hide second button
+                    document.getElementById("nextquestionbutton4").hidden = false; //show next question button
+                 form.elements["answer4"].readOnly = true; //lock-in answer
+                 document.getElementById("suggestionsbutton4").hidden = true; //hide suggestions button
+             } else if (choice != "...ANSWER GOES HERE...") {
+                 document.getElementById("feedbacktext4").innerHTML = 
+                     `<span class="red">oh no that is incorrect</span> <br><br>
+                     <span class="green">The correct answer is <br> ...CORRECT ANSWER GOES HERE... <span>`; //incorrect second time feedback
+                 document.getElementById("submitbutton44").hidden = true; //hide second button
+                    document.getElementById("nextquestionbutton4").hidden = false; //show next question button
+                 form.elements["answer4"].readOnly = true; //lock-in answer
+                 document.getElementById("suggestionstext4").innerHTML = `maybe try revising ...SUBJECT GOES HERE...`; //incorrect second time feedback
+                 document.getElementById("suggestionsbutton4").hidden = true; //hide suggestions button
+             }
+         } //END SECOND ATTEMPT
+ 
+         //HINTS
+ 
+         function hints4 (form) {
+             document.getElementById("hintstext4").innerHTML = 
+                 "...HINT GOES HERE...";
+             document.getElementById("hintsbutton4").hidden = true; //hide help button
+         } //hint shown when button pressed
+ 
+         //SUGGESTIONS
+ 
+         function suggestions4 (form) {
+             document.getElementById("suggestionstext4").innerHTML = "...SUGGESTION GOES HERE...";
+             document.getElementById("suggestionsbutton4").hidden = true; //hide suggestions button
+         } //suggestion for incorrect first answer  
+ 
+         //NEXT QUESTION
+ 
+         function nextQuestion4 (form) {
+             var choice = document.getElementById("submitbutton4").hidden;
+             var choices = document.getElementById("submitbutton44").hidden;
+             if (choice == false) {
+                 alert("please enter an answer before going to the next question"); //blank submission alert
+                 document.getElementById("ref4").href = "#question4";
+             }
+             if (choices == false) {
+                 alert("please enter an answer before going to the next question"); //blank submission alert
+                 document.getElementById("ref4").href = "#question4";
+             }
+         }
+ 
+         </script>
+        <script> // QUESTION 5
+            
+
+           // FIRST ATTEMPT AT QUESTION 5 
+
+        function submitAnswer5 (form) {
+            var choice = document.getElementById("answer5").value; // user input
+                    
+                if (choice == "") {
+                    alert("please enter an answer before submitting"); //blank submission alert
+                } else if (choice == "...ANSWER GOES HERE...") {
+                       document.getElementById("feedbacktext5").innerHTML = 
+                       `<span class="green">Correct answer, good job! </span>` //correct first time feedback;
+                    document.getElementById("nextquestionbutton5").hidden = false; //show next question button
+                      document.getElementById("submitbutton5").hidden = true; //hide first button
+                     form.elements["answer5"].readOnly = true; //lock-in answer
+                } else if (choice != "...ANSWER GOES HERE...") {
+                    document.getElementById("feedbacktext5").innerHTML = 
+                        `<span class="red">Sorry, that is incorrect</span><br>
+                            <br>but you were so close, you should have another try`; //incorrect first time feedback
+                     document.getElementById("submitbutton5").hidden = true; //hide first button
+                    document.getElementById("submitbutton55").hidden = false; //show second button
+                    document.getElementById("suggestionsbutton5").hidden = false; //show suggestions button
+                    document.getElementById("suggestionstext5").innerHTML = `Maybe try a suggestion, there could be an easy way to find the answer`
+                    if (document.getElementById("hintsbutton5").hidden == false) {
+                    document.getElementById("hintstext5").innerHTML = `Try using a hint to help you remember something important`
+                    }// suggest using a hint
+                }
+                    
+        } //END FIRST ATTEMPT
+
+
+        //SECOND ATTEMPT AT QUESTION 5
+
+        function submitAnswer55 (form) {
+            var choice = document.getElementById("answer5").value; // user input
+
+            if (choice == "") {
+                    alert("please enter an answer before submitting"); //blank submission alert
+            } else if (choice == "...ANSWER GOES HERE...") {
+                document.getElementById("feedbacktext5").innerHTML = 
+                    `<span class="green">Well done, that is correct!</span>`; //correct second time feedback
+                document.getElementById("submitbutton55").hidden = true; //hide second button
+                document.getElementById("nextquestionbutton5").hidden = false; //show next question button
+                form.elements["answer5"].readOnly = true; //lock-in answer
+                document.getElementById("suggestionsbutton5").hidden = true; //hide suggestions button
+            } else if (choice != "...ANSWER GOES HERE...") {
+                document.getElementById("feedbacktext5").innerHTML = 
+                    `<span class="red">oh no that is incorrect</span> <br><br>
+                    <span class="green">The correct answer is <br> ...CORRECT ANSWER GOES HERE... <span>`; //incorrect second time feedback
+                document.getElementById("submitbutton55").hidden = true; //hide second button
+                document.getElementById("nextquestionbutton5").hidden = false; //show next question button
+                form.elements["answer5"].readOnly = true; //lock-in answer
+                document.getElementById("suggestionstext5").innerHTML = `maybe try revising ...SUBJECT GOES HERE...`; //incorrect second time feedback
+                document.getElementById("suggestionsbutton5").hidden = true; //hide suggestions button
+            }
+        } //END SECOND ATTEMPT
+
+        //HINTS
+
+        function hints5 (form) {
+            document.getElementById("hintstext5").innerHTML = 
+                "...HINT GOES HERE...";
+            document.getElementById("hintsbutton5").hidden = true; //hide help button
+        } //hint shown when button pressed
+
+        //SUGGESTIONS
+
+        function suggestions5 (form) {
+            document.getElementById("suggestionstext5").innerHTML = "...SUGGESTION GOES HERE...";
+            document.getElementById("suggestionsbutton5").hidden = true; //hide suggestions button
+        } //suggestion for incorrect first answer  
+
+        //NEXT QUESTION
+
+        function nextQuestion5 (form) {
+            var choice = document.getElementById("submitbutton5").hidden;
+            var choices = document.getElementById("submitbutton55").hidden;
+            if (choice == false) {
+                alert("please enter an answer before going to the next question"); //blank submission alert
+                document.getElementById("ref5").href = "#question5";
+            }
+            if (choices == false) {
+                alert("please enter an answer before going to the next question"); //blank submission alert
+                document.getElementById("ref5").href = "#question5";
+            }
+        }
+
+        </script>
+        <script> //SUBMIT ALL ANSWERS
+            
+            function submitAllAnswers (form) {
+                var choice1 = document.getElementById("nextquestionbutton1").hidden
+                var choice2 = document.getElementById("nextquestionbutton2").hidden
+                var choice3 = document.getElementById("nextquestionbutton3").hidden
+                var choice4 = document.getElementById("nextquestionbutton4").hidden
+
+                if (document.getElementById("answer1").value == 9) {
+                    var score1 = 1
+                    topic1 = ""
+                } else if (document.getElementById("answer1").value != 9) {
+                    var score1 = 0
+                    topic1 = "Geomerty - area and perimeter"
+                } 
+                if (document.getElementById("answer2").value == 9) {
+                    var score2 = 1
+                    topic2 = ""
+                } else if (document.getElementById("answer2").value != 9) {
+                    var score2 = 0
+                    topic2 = "Number - ratio and proportion"
+                }
+                if (document.getElementById("answer3").value == 9) {
+                    var score3 = 1
+                    topic3 = ""
+                } else if (document.getElementById("answer3").value != 9) {
+                    var score3 = 0
+                    topic3 = "Applied - speed distance and time"
+                }
+                if (document.getElementById("answer4").value == 9) {
+                    var score4 = 1
+                    topic4 = ""
+                } else if (document.getElementById("answer4").value != 9) {
+                    var score4 = 0
+                    topic4 = "Algebra - solving linear equations"
+                }
+                if (document.getElementById("answer5").value == 9) {
+                    var score5 = 1
+                    topic5 = ""
+                } else if (document.getElementById("answer5").value != 9) {
+                    var score5 = 0
+                    topic5 = "Number - LCM and HCF"
+                }
+                
+                var totalscore = score1 + score2 + score3 + score4 + score5
+
+                if (choice1==false & choice2==false & choice3==false & choice4==false) {
+                    alert("Well done for completing the test. Your total score is " + totalscore + "/5.");
+                }
+            }
+        
+        </script>
+        
+    </head>
+    <body>
+    <div id="allcontent">
+
+
+        <!--QUESTION 1-->
+
+
+        <div id="question1">
+        
+            <!--HEADER-->
+        
+        <div id="header">
+
+            <div id="testtype">Casual Test</div>
+            
+        </div>
+
+        <!--QUESTIONS, INSTRUCTIONS AND HINTS-->
+
+        <div id="questionhints">
+
+            <!--QUESTIONS-->
+            <div id="questionbox">
+                <div id="questionnumber">...QUESTION NUMBER GOES HERE...</div>
+                <div id="subject">...SUBJECT GOES HERE...</div>
+                <div id="questiontext">
+                    ...QUESTION GOES HERE...
+                </div>
+            </div>
+
+            <!--HINTS AND INSTRUCTIONS-->
+
+            <div id="hintsinstructionbox">
+                <div id="instructionsbuttonbox">                    
+                    <input type="button" value="instructions" id="instructionsbutton" hidden>
+                </div>
+                <div id="hintsbox">
+                    <div id="hintsbuttonbox">
+                        <form>
+                            <input type="button" value="hints" id="hintsbutton1" onclick="hints1(this.form)">
+                        </form>
+                    </div>
+                    <div id="hintstext">
+                        <p id="hintstext1">
+                            If you need help, try using the hints button
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--FEEDBACK, ANSWERS AND SUGGESTIONS-->
+
+        <div id="feedbackanswersuggestions">
+            
+            <!--FEEDBACK-->
+
+            <div id="feedbackbox">
+                <div id="feedbacktext">
+                    <p id="feedbacktext1"></p>
+                </div>
+            </div>
+
+            <!--ANSWER AND SUBMIT-->
+
+            <div id="answersubmitbox">
+                <form>
+                <div id="answertext">
+                    <input type="number" placeholder="answer here" id="answer1">
+                </div>
+                <div id="submitbuttonbox">
+                    <input type="button" value="submit button" id="submitbutton1" onclick="submitAnswer1(this.form)">
+                    <input type="button" value="one more try" id="submitbutton11" onclick="submitAnswer11(this.form)" hidden>
+                </div>
+            </form>
+            </div>
+
+            <!--SUGGESTIONS-->
+
+            <div id="suggestionsbox">
+                <div id="suggestionsbuttonbox">
+                    <form>
+                    <input type="button" value="suggestions" hidden id="suggestionsbutton1" onclick="suggestions1(this.form)">
+                </form>
+                </div>
+                <div id="suggestionstext">
+                    <p id="suggestionstext1"></p>
+                </div>
+            </div>
+
+        </div>
+
+        <!--NEXT QUESTION-->
+
+        <div id="nextquestion">
+            <div id="nextquestionbuttonbox">
+                <a href="#question2" target="_self" id="ref1">
+                    <input type="button" value="next question" hidden id="nextquestionbutton1" onclick="nextQuestion1(this.form)">
+                </a>
+            </div>
+        </div>
+
+        <!--EMPTY BOX-->
+
+        <div id="emptybox"></div>
+
+        <!--FOOTER-->
+
+        <div id="footer">
+            <div id="funfactbox"></div>
+        </div>
+        </div>
+
+
+        <!--QUESTION 2-->
+
+
+        <div id="question2">
+        
+        <!--HEADER-->
+    
+    <div id="header">
+
+        <div id="testtype">Casual Test</div>
+        
+    </div>
+
+    <!--QUESTIONS, INSTRUCTIONS AND HINTS-->
+
+    <div id="questionhints">
+
+        <!--QUESTIONS-->
+        <div id="questionbox">
+            <div id="questionnumber">...QUESTION NUMBER GOES HERE...</div>
+            <div id="subject">...SUBJECT GOES HERE...</div>
+            <div id="questiontext">
+                ...QUESTION GOES HERE...
+            </div>
+        </div>
+
+        <!--HINTS AND INSTRUCTIONS-->
+
+        <div id="hintsinstructionbox">
+            <div id="instructionsbuttonbox">                    
+                <input type="button" value="instructions" id="instructionsbutton" hidden>
+            </div>
+            <div id="hintsbox">
+                <div id="hintsbuttonbox">
+                    <form>
+                        <input type="button" value="hints" id="hintsbutton2" onclick="hints2(this.form)">
+                    </form>
+                </div>
+                <div id="hintstext">
+                    <p id="hintstext2">
+                        If you need help, try using the hints button
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--FEEDBACK, ANSWERS AND SUGGESTIONS-->
+
+    <div id="feedbackanswersuggestions">
+        
+        <!--FEEDBACK-->
+
+        <div id="feedbackbox">
+            <div id="feedbacktext">
+                <p id="feedbacktext2"></p>
+            </div>
+        </div>
+
+        <!--ANSWER AND SUBMIT-->
+
+        <div id="answersubmitbox">
+            <form>
+            <div id="answertext">
+                <input type="number" placeholder="answer here" id="answer2">
+            </div>
+            <div id="submitbuttonbox">
+                <input type="button" value="submit button" id="submitbutton2" onclick="submitAnswer2(this.form)">
+                <input type="button" value="one more try" id="submitbutton22" onclick="submitAnswer22(this.form)" hidden>
+            </div>
+        </form>
+        </div>
+
+        <!--SUGGESTIONS-->
+
+        <div id="suggestionsbox">
+            <div id="suggestionsbuttonbox">
+                <form>
+                <input type="button" value="suggestions" hidden id="suggestionsbutton2" onclick="suggestions2(this.form)">
+            </form>
+            </div>
+            <div id="suggestionstext">
+                <p id="suggestionstext2"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!--NEXT QUESTION-->
+
+    <div id="nextquestion">
+        <div id="nextquestionbuttonbox">
+            <a href="#question3" target="_self" id="ref2">
+                <input type="button" value="next question" hidden id="nextquestionbutton2" onclick="nextQuestion2(this.form)">
+            </a>
+        </div>
+    </div>
+
+    <!--EMPTY BOX-->
+
+    <div id="emptybox"></div>
+
+    <!--FOOTER-->
+
+    <div id="footer">
+        <div id="funfactbox"></div>
+    </div>
+        </div>
+
+    
+         <!--QUESTION 3-->
+
+
+         <div id="question3">
+        
+            <!--HEADER-->
+        
+        <div id="header">
+    
+            <div id="testtype">Casual Test</div>
+            
+        </div>
+    
+        <!--QUESTIONS, INSTRUCTIONS AND HINTS-->
+    
+        <div id="questionhints">
+    
+            <!--QUESTIONS-->
+            <div id="questionbox">
+                <div id="questionnumber">...QUESTION NUMBER GOES HERE...</div>
+                <div id="subject">...SUBJECT GOES HERE...</div>
+                <div id="questiontext">
+                    ...QUESTION GOES HERE...
+                </div>
+            </div>
+    
+            <!--HINTS AND INSTRUCTIONS-->
+    
+            <div id="hintsinstructionbox">
+                <div id="instructionsbuttonbox">                    
+                    <input type="button" value="instructions" id="instructionsbutton" hidden>
+                </div>
+                <div id="hintsbox">
+                    <div id="hintsbuttonbox">
+                        <form>
+                            <input type="button" value="hints" id="hintsbutton3" onclick="hints3(this.form)">
+                        </form>
+                    </div>
+                    <div id="hintstext">
+                        <p id="hintstext3">
+                            If you need help, try using the hints button
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!--FEEDBACK, ANSWERS AND SUGGESTIONS-->
+    
+        <div id="feedbackanswersuggestions">
+            
+            <!--FEEDBACK-->
+    
+            <div id="feedbackbox">
+                <div id="feedbacktext">
+                    <p id="feedbacktext3"></p>
+                </div>
+            </div>
+    
+            <!--ANSWER AND SUBMIT-->
+    
+            <div id="answersubmitbox">
+                <form>
+                <div id="answertext">
+                    <input type="number" placeholder="answer here" id="answer3">
+                </div>
+                <div id="submitbuttonbox">
+                    <input type="button" value="submit button" id="submitbutton3" onclick="submitAnswer3(this.form)">
+                    <input type="button" value="one more try" id="submitbutton33" onclick="submitAnswer33(this.form)" hidden>
+                </div>
+            </form>
+            </div>
+    
+            <!--SUGGESTIONS-->
+    
+            <div id="suggestionsbox">
+                <div id="suggestionsbuttonbox">
+                    <form>
+                    <input type="button" value="suggestions" hidden id="suggestionsbutton3" onclick="suggestions3(this.form)">
+                </form>
+                </div>
+                <div id="suggestionstext">
+                    <p id="suggestionstext3"></p>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!--NEXT QUESTION-->
+    
+        <div id="nextquestion">
+            <div id="nextquestionbuttonbox">
+                <a href="#question4" target="_self" id="ref3">
+                    <input type="button" value="next question" hidden id="nextquestionbutton3" onclick="nextQuestion3(this.form)">
+                </a>
+            </div>
+        </div>
+    
+        <!--EMPTY BOX-->
+    
+        <div id="emptybox"></div>
+    
+        <!--FOOTER-->
+    
+        <div id="footer">
+            <div id="funfactbox"></div>
+        </div>
+            </div>
+    
+
+         <!--QUESTION 4-->
+
+
+         <div id="question4">
+        
+            <!--HEADER-->
+        
+        <div id="header">
+    
+            <div id="testtype">Casual Test</div>
+            
+        </div>
+    
+        <!--QUESTIONS, INSTRUCTIONS AND HINTS-->
+    
+        <div id="questionhints">
+    
+            <!--QUESTIONS-->
+            <div id="questionbox">
+                <div id="questionnumber">...QUESTION NUMBER GOES HERE...</div>
+                <div id="subject">...SUBJECT GOES HERE...</div>
+                <div id="questiontext">
+                    ...QUESTION GOES HERE...
+                </div>
+            </div>
+    
+            <!--HINTS AND INSTRUCTIONS-->
+    
+            <div id="hintsinstructionbox">
+                <div id="instructionsbuttonbox">                    
+                    <input type="button" value="instructions" id="instructionsbutton" hidden>
+                </div>
+                <div id="hintsbox">
+                    <div id="hintsbuttonbox">
+                        <form>
+                            <input type="button" value="hints" id="hintsbutton4" onclick="hints4(this.form)">
+                        </form>
+                    </div>
+                    <div id="hintstext">
+                        <p id="hintstext4">
+                            If you need help, try using the hints button
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!--FEEDBACK, ANSWERS AND SUGGESTIONS-->
+    
+        <div id="feedbackanswersuggestions">
+            
+            <!--FEEDBACK-->
+    
+            <div id="feedbackbox">
+                <div id="feedbacktext">
+                    <p id="feedbacktext4"></p>
+                </div>
+            </div>
+    
+            <!--ANSWER AND SUBMIT-->
+    
+            <div id="answersubmitbox">
+                <form>
+                <div id="answertext">
+                    <input type="number" placeholder="answer here" id="answer4">
+                </div>
+                <div id="submitbuttonbox">
+                    <input type="button" value="submit button" id="submitbutton4" onclick="submitAnswer4(this.form)">
+                    <input type="button" value="one more try" id="submitbutton44" onclick="submitAnswer44(this.form)" hidden>
+                </div>
+            </form>
+            </div>
+    
+            <!--SUGGESTIONS-->
+    
+            <div id="suggestionsbox">
+                <div id="suggestionsbuttonbox">
+                    <form>
+                    <input type="button" value="suggestions" hidden id="suggestionsbutton4" onclick="suggestions4(this.form)">
+                </form>
+                </div>
+                <div id="suggestionstext">
+                    <p id="suggestionstext4"></p>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!--NEXT QUESTION-->
+    
+        <div id="nextquestion">
+            <div id="nextquestionbuttonbox">
+                <a href="#question5" target="_self" id="ref4">
+                    <input type="button" value="next question" hidden id="nextquestionbutton4" onclick="nextQuestion4(this.form)">
+                </a>
+            </div>
+        </div>
+    
+        <!--EMPTY BOX-->
+    
+        <div id="emptybox"></div>
+    
+        <!--FOOTER-->
+    
+        <div id="footer">
+            <div id="funfactbox"></div>
+        </div>
+            </div>
+        
+
+        <!--QUESTION 5-->
+
+
+        <div id="question5">
+        
+            <!--HEADER-->
+        
+        <div id="header">
+    
+            <div id="testtype">Casual Test</div>
+            
+        </div>
+    
+        <!--QUESTIONS, INSTRUCTIONS AND HINTS-->
+    
+        <div id="questionhints">
+    
+            <!--QUESTIONS-->
+            <div id="questionbox">
+                <div id="questionnumber">...QUESTION NUMBER GOES HERE...</div>
+                <div id="subject">...SUBJECT GOES HERE...</div>
+                <div id="questiontext">
+                    ...QUESTION GOES HERE...
+                </div>
+            </div>
+    
+            <!--HINTS AND INSTRUCTIONS-->
+    
+            <div id="hintsinstructionbox">
+                <div id="instructionsbuttonbox">                    
+                    <input type="button" value="instructions" id="instructionsbutton" hidden>
+                </div>
+                <div id="hintsbox">
+                    <div id="hintsbuttonbox">
+                        <form>
+                            <input type="button" value="hints" id="hintsbutton5" onclick="hints5(this.form)">
+                        </form>
+                    </div>
+                    <div id="hintstext">
+                        <p id="hintstext5">
+                            If you need help, try using the hints button
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!--FEEDBACK, ANSWERS AND SUGGESTIONS-->
+    
+        <div id="feedbackanswersuggestions">
+            
+            <!--FEEDBACK-->
+    
+            <div id="feedbackbox">
+                <div id="feedbacktext">
+                    <p id="feedbacktext5"></p>
+                </div>
+            </div>
+    
+            <!--ANSWER AND SUBMIT-->
+    
+            <div id="answersubmitbox">
+                <form>
+                <div id="answertext">
+                    <input type="number" placeholder="answer here" id="answer5">
+                </div>
+                <div id="submitbuttonbox">
+                    <input type="button" value="submit button" id="submitbutton5" onclick="submitAnswer5(this.form)">
+                    <input type="button" value="one more try" id="submitbutton55" onclick="submitAnswer55(this.form)" hidden>
+                </div>
+            </form>
+            </div>
+    
+            <!--SUGGESTIONS-->
+    
+            <div id="suggestionsbox">
+                <div id="suggestionsbuttonbox">
+                    <form>
+                    <input type="button" value="suggestions" hidden id="suggestionsbutton5" onclick="suggestions5(this.form)">
+                </form>
+                </div>
+                <div id="suggestionstext">
+                    <p id="suggestionstext5"></p>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!--NEXT QUESTION-->
+    
+        <div id="nextquestion">
+            <div id="nextquestionbuttonbox">
+                <a href="#question1" target="_self" id="ref5">
+                    <input type="button" value="submit all answers"  hidden id="nextquestionbutton5" onclick="submitAllAnswers(this.form)">
+                </a>
+            </div>
+        </div>
+    
+        <!--EMPTY BOX-->
+    
+        <div id="emptybox"></div>
+    
+        <!--FOOTER-->
+    
+        <div id="footer">
+            <div id="funfactbox"></div>
+        </div>
+            </div>
+    
+        
+    
+
+    
+    </div>
+    </body>
